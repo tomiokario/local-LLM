@@ -198,6 +198,14 @@ aiderでは次の形式を使います。
 ollama_chat/<model>
 ```
 
+## Codex マルチエージェント運用
+
+このリポジトリで Codex が作業するときの正本ルールは [`AGENTS.md`](AGENTS.md) です。
+
+複数ファイル変更、PowerShell スクリプト修正、モデル評価、運用ルール変更、Issue 対応のように失敗時の影響が大きい作業では、親オーケストレータ、質問担当、実装担当、fresh review 担当、intent review 担当の役割に分けて進めます。再利用用の役割定義は [`.codex/agents/`](.codex/agents/) に置いています。
+
+複数タスクを同時に進める場合は、repository 内の gitignored な `tmp/worktrees/` に task ごとの worktree を作り、branch と Codex スレッドを分けます。詳細は [`docs/codex-multi-agent-workflow.md`](docs/codex-multi-agent-workflow.md) を参照してください。
+
 ## 初期セットアップ手順
 
 1. `C:\LLM`を作成する
