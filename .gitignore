@@ -1,0 +1,9 @@
+.aider*
+!.aider.conf.yml
+*.log
+*.tmp
+ollama/
+lmstudio/
+work/*
+!work/.gitkeep
+notes/*.local.*
