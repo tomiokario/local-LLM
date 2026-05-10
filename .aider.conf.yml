@@ -1,0 +1,7 @@
+﻿model: "ollama_chat/batiai/qwen3.6-35b:iq3"
+weak-model: "ollama_chat/batiai/gemma4-26b:iq4"
+map-tokens: 4096
+auto-commits: false
+dirty-commits: false
+attribute-author: false
+attribute-committer: false

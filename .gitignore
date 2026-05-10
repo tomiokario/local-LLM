@@ -1,0 +1,13 @@
+﻿.aider*
+!.aider.conf.yml
+.env
+*.local.*
+*.log
+*.tmp
+tmp/
+docs/codex-multi-agent-workflow.md
+*_data/
+ollama/
+lmstudio/
+work/*
+!work/.gitkeep
