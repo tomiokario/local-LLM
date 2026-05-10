@@ -1,4 +1,4 @@
-﻿# Cline + Ollama 接続メモ
+# Cline + Ollama 接続メモ
 
 VS Code の Cline から Ollama を使う時は、まず Ollama が起動していることを確認します。
 

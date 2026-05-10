@@ -1,4 +1,4 @@
-﻿---
+---
 name: parallel-task-processing
 description: Use when the user wants Codex to process multiple local tasks or GitHub issues in parallel using a management thread, per-task Codex threads, git worktrees, separate branches, review gates, and cleanup.
 metadata:

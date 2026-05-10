@@ -1,4 +1,4 @@
-﻿sample_id,condition,score,notes
+sample_id,condition,score,notes
 A001,baseline,0.72,public dummy row
 A002,baseline,0.69,public dummy row
 A003,prompt_v2,0.81,public dummy row

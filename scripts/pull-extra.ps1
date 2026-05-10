@@ -1,5 +1,10 @@
-﻿[CmdletBinding()]
-param()
+[CmdletBinding()]
+param(
+    [string[]]$Models = @(
+        "batiai/qwen3.6-35b:iq4",
+        "gemma4:e4b"
+    )
+)
 
 $ErrorActionPreference = "Stop"
 
@@ -14,11 +19,6 @@ if (-not $OllamaCommand) {
 if (-not $OllamaCommand) {
     throw "ollama command was not found. Run scripts/setup.ps1 -InstallOllama first, then restart PowerShell."
 }
-
-$Models = @(
-    "batiai/qwen3.6-35b:iq4",
-    "gemma4:e4b"
-)
 
 foreach ($Model in $Models) {
     Write-Host "Pulling $Model"

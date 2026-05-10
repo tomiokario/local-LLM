@@ -1,4 +1,4 @@
-﻿[CmdletBinding()]
+[CmdletBinding()]
 param(
     [string]$Model = "ollama_chat/batiai/qwen3.6-35b:iq3",
     [string]$ProjectPath = (Join-Path (Split-Path -Parent $PSScriptRoot) "work")
