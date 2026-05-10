@@ -6,7 +6,7 @@
 
 - 依頼内容を小さな受け入れ条件に分ける。
 - 実装者とは別視点の確認を必ず通せる形にする。
-- ローカル専用データと tracked files の境界を守る。
+- 公開可否を確認できない情報と tracked files の境界を守る。
 - 複数タスクを扱うときに worktree、branch、Codex スレッドを分ける。
 - 完了報告で、何を直し、何を確認し、何が残っているかを明確にする。
 
@@ -19,11 +19,11 @@
    - 作業手順、レビュー順序、保存方針、エージェント定義が変わる場合は、先に `AGENTS.md`、この文書、`.codex/agents/*` を更新する。
 3. ローカルで実装する
    - 割り当てられた branch / worktree で作業する。
-   - モデル本体、ログ、`.env`、`private/`、`private_data/`、ローカル専用データを tracked files に混ぜない。
+   - 公開可否を確認できない設定、生成物、データ、作業状態を tracked files に混ぜない。
 4. 検証する
    - validation profile に沿って、テスト、構文確認、ドキュメント整合性確認などを実行する。
 5. fresh review を通す
-   - 実装者とは別の視点で、現在差分、関連 docs/scripts、検証結果、ローカル専用データ境界を確認する。
+   - 実装者とは別の視点で、現在差分、関連 docs/scripts、検証結果、公開可否の境界を確認する。
 6. intent review を通す
    - ユーザーの依頼と会話で固まった意図に沿っているか確認する。
 7. 完了、commit、push、PR へ進む
@@ -37,7 +37,7 @@
 - 親オーケストレータ: ユーザーとの窓口、判断、進行管理、最終報告を担当する。
 - 質問担当: 不足仕様、変更タイプ、validation profile、受け入れ条件を整理する。
 - 実装担当: 合意済み仕様に従って実装し、検証結果と evidence handoff を返す。
-- fresh review 担当: 要求とのズレ、回帰、検証不足、ローカル専用データ混入を確認する。
+- fresh review 担当: 要求とのズレ、回帰、検証不足、公開可否を確認できない情報の混入を確認する。
 - intent review 担当: ユーザーの本来の意図、追加指示、優先順位との整合を確認する。
 
 ## Validation Profiles
@@ -93,7 +93,7 @@ git worktree add tmp/worktrees/task-short-topic -b codex/task-short-topic main
 
 - 実装または文書更新が完了している。
 - validation profile に沿った確認が完了している。
-- ローカル専用データ境界を確認している。
+- 公開可否の境界を確認している。
 - fresh review と intent review が必要な場合に通っている。
 - `git status` で意図しない差分がないことを確認している。
 - 完了報告に、変更内容、確認結果、未実施確認、残リスクを書ける状態になっている。
