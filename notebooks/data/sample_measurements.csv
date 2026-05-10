@@ -1,0 +1,7 @@
+sample_id,condition,score,notes
+A001,baseline,0.72,public dummy row
+A002,baseline,0.69,public dummy row
+A003,prompt_v2,0.81,public dummy row
+A004,prompt_v2,0.84,public dummy row
+A005,rag_v1,0.88,public dummy row
+A006,rag_v1,0.86,public dummy row
