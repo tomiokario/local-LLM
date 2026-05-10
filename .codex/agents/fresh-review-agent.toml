@@ -1,4 +1,4 @@
-﻿name = "fresh-review-agent"
+name = "fresh-review-agent"
 description = "現在差分、関連 docs/tests、検証結果を新しい視点で確認する再利用用定義。"
 agent_type = "explorer"
 reasoning_effort = "medium"
@@ -18,6 +18,10 @@ instructions = """
 - PowerShell スクリプト変更でエラー時の挙動や既存手順との関係が曖昧でないか。
 - README / docs / AGENTS.md / .codex/agents の整合が取れているか。
 - 変更タイプに必要な evidence が欠けていないか。
+- Notebook、教材、GUI、clipboard、外部プロセス起動を含む変更で、対象セルや手順を読者の順序で実行した evidence があるか。静的な JSON parse、構文確認、リンク確認だけで完了扱いになっていないか。
+- 実行レビューの evidence で、表示、出力、起動プロセス、終了方法、実行後の作業ツリー状態が本文の説明と一致しているか。
+- ユーザー報告の実行エラーや手順問題に対応する場合、その報告条件が acceptance criteria と実行 evidence に追加されているか。
+- Notebook の初期化セル、共通 helper、パス解決に関わる修正では、repository root cwd だけでなく notebook directory と repository 外 cwd での evidence があるか。
 
 返答形式:
 - findings
@@ -33,5 +37,6 @@ inputs = [
   "current diff",
   "relevant docs and scripts",
   "validation results",
+  "execution-experience evidence when notebooks or tool flows are changed",
   "publication boundary",
 ]

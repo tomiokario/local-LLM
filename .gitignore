@@ -1,9 +1,11 @@
-﻿.aider*
+.aider*
 !.aider.conf.yml
 .env
 *.local.*
 *.log
 *.tmp
+__pycache__/
+*.pyc
 tmp/
 docs/codex-multi-agent-workflow.md
 *_data/
